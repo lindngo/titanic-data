@@ -82,22 +82,19 @@ survival_pivot_table.drop('All')
 # A: Females in Pclass 1 and 2 had a survival rate over 90%, whereas females in Pclass 3 had a 50% survival rate. 
 # On the other hand, males had significantly lower survival rates, with Pclass 1 being the highest (36%) and Pclass 2 and 3 being around 14%.
 
-# Q 6: Is Age or Fare an important factor to one's chance of survival?** Visualize the distribution of Column _Age_ for both survived and non-survived population and write down your findings based on the visualization.
+# Q: Is Age or Fare an important factor to one's chance of survival?
 
-#Answer: From this visualization, it is difficult to make significant conclusions based on age. For those who survived, they fell within the 20-40 year old range, where as those who did not survive, they also fell within the 20-40 range.
-#On the other hand, we can see a higher density of deceased passengers on the fare chart. This fare chart also has a bigger gap in density between those who survived and are deceased.
 sns.displot(titanic, x='Age', hue='Survived', kind = 'kde')
 plt.show()
 
 sns.displot(titanic, x='Fare', hue='Survived', kind = 'kde')
 plt.show()
 
-"""### **Question 7: Calculate and visualize the survival rate for discrete columns**
-- Calculate the survival rate for column _SibSp_ and _Parch_.
-- Use sns.barplot to visualize the survival rate for column _SibSp_ and _Parch_.
-"""
+# A: From this visualization, it is difficult to make significant conclusions based on age. For those who survived, they fell within the 20-40 year old range, where as those who did not survive, they also fell within the 20-40 range.
+# On the other hand, we can see a higher density of deceased passengers on the fare chart. This fare chart also has a bigger gap in density between those who survived and are deceased.
 
-#Answer: It is interesting to see that the survival rate was highest for those who had 1-3 parents/children, where as 0, 4, 5, and 6 parents/children had lower survival rates.
+# Q: Calculate and visualize the survival rate for discrete columns. Calculate the survival rate for column _SibSp_ and _Parch_.
+
 parch_table = pd.pivot_table(titanic, values = ['Survived'], index = ['Parch'], margins = True)
 parch_table = parch_table.drop('All')
 
@@ -107,7 +104,9 @@ plt.ylabel('Survival Rate')
 plt.title('Parch Survival Rate')
 plt.show()
 
-#Answer: We can see that 1-2 siblings/spouses had higher survival rates compared to the others.
+
+# A: It is interesting to see that the survival rate was highest for those who had 1-3 parents/children, where as 0, 4, 5, and 6 parents/children had lower survival rates.
+
 sibsp_table = pd.pivot_table(titanic, values = ['Survived'], index = ['SibSp'], margins = True)
 sibsp_table = sibsp_table.drop('All')
 
@@ -117,23 +116,17 @@ plt.ylabel('Survival Rate')
 plt.title('SibSp Survival Rate')
 plt.show()
 
-"""### **Question 8: Find the correlations.**
-Find the correlations between the feature and the target variable _Survived_ and use heatmap to visualize it. Summarize your findings.
-"""
+# A: We can see that 1-2 siblings/spouses had higher survival rates compared to the others.
 
-#Answer: From the heatmap generated, we can see that Survived variable is correlated most with Fare, as the correlation value is 0.26. On the other hand, we can conclude that Pclass has the weakest correlation with survival rate with a value of -0.34.
+# Q: Find the correlations between the feature and the target variable _Survived_ and use heatmap to visualize it.
 
 sns.heatmap(titanic.corr(), annot = True)
 
-"""### **Question 9: Any other insights do you draw by analyzing the data? Summarize the findings as well as provide the code leading you to the findings.**"""
+# A: From the heatmap generated, we can see that Survived variable is correlated most with Fare, as the correlation value is 0.26. On the other hand, we can conclude that Pclass has the weakest correlation with survival rate with a value of -0.34.
 
-#Answer: I was interested to see what the survival rate looked like for the passengers from each of the three ports. From the chart generated below, 
-#we can see that Cherbourg had the highest survival rate among males and females compared to the other two ports.
+# Q: Any other insights do you draw by analyzing the data?
 
 sns.barplot(data = titanic, x = "Embarked", y = "Survived", hue = 'Sex')
 
-"""### **Bonus Point: Build a ML model to predict survival.**
-Can you build a logistic regression model to predict the probability of survival for all the passengers in this [file](https://raw.githubusercontent.com/zariable/data/master/titanic_test.csv)? You can evaluate your model accuracy on [Kaggle](https://www.kaggle.com/c/titanic). Can you think of any other ways to improve the model performance? Implement your idea to see if it actually works. 
-"""
-
-# TODO
+# A: I was interested to see what the survival rate looked like for the passengers from each of the three ports. From the chart generated below, 
+# We can see that Cherbourg had the highest survival rate among males and females compared to the other two ports.
