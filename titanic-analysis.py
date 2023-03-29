@@ -79,7 +79,7 @@ survival_pivot_table = pd.pivot_table(titanic, values = ['Survived'], index = ['
 survival_pivot_table.drop('All')
 
 # A: Females in Pclass 1 and 2 had a survival rate over 90%, whereas females in Pclass 3 had a 50% survival rate. 
-# On the other hand, males had significantly lower survival rates, with Pclass 1 being the highest (36%) and Pclass 2 and 3 being around 14%.
+# On the other hand, males had significantly lower survival rates, with Pclass 1 being the highest at 36% and Pclass 2 and 3 being around 14%.
 
 # Q: Is Age or Fare an important factor to one's chance of survival?
 
@@ -90,7 +90,7 @@ sns.displot(titanic, x='Fare', hue='Survived', kind = 'kde')
 plt.show()
 
 # A: From this visualization, it is difficult to make significant conclusions based on age. For those who survived, they fell within the 20-40 year old range, where as those who did not survive, they also fell within the 20-40 range.
-# On the other hand, we can see a higher density of deceased passengers on the fare chart. This fare chart also has a bigger gap in density between those who survived and are deceased.
+# On the other hand, we can see a higher density of deceased passengers on the fare chart. This fare chart also has a bigger gap in density between those who survived and were deceased.
 
 # Q: Calculate and visualize the survival rate for discrete columns. Calculate the survival rate for column _SibSp_ and _Parch_.
 
@@ -130,4 +130,4 @@ sns.barplot(data = titanic, x = "Embarked", y = "Survived", hue = 'Sex')
 plt.show()
 
 # A: I was interested to see what the survival rate looked like for the passengers from each of the three ports. From the chart generated below, 
-# We can see that Cherbourg had the highest survival rate among males and females compared to the other two ports.
+# we can see that Cherbourg had the highest survival rate among males and females compared to the other two ports.
