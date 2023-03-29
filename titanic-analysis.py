@@ -43,9 +43,8 @@ titanic_missing = titanic.isna()
 titanic_missing
 
 # Imputing missing values using different methods: 
-# using a meaningful constant value to the dataset, 
-# using mean, median, or mode based on non-missing values of respective column, or
-# using random value based on non-missing values of the respective column.
+# using a meaningful constant value to the dataset, or
+# using mean, median, or mode based on non-missing values of respective column.
 
 # Column cabin with meaingful constant value 'other'
 filled_cabin = titanic['Cabin'].fillna('other')
@@ -121,12 +120,14 @@ plt.show()
 # Q: Find the correlations between the feature and the target variable _Survived_ and use heatmap to visualize it.
 
 sns.heatmap(titanic.corr(), annot = True)
+plt.show()
 
 # A: From the heatmap generated, we can see that Survived variable is correlated most with Fare, as the correlation value is 0.26. On the other hand, we can conclude that Pclass has the weakest correlation with survival rate with a value of -0.34.
 
 # Q: Any other insights do you draw by analyzing the data?
 
 sns.barplot(data = titanic, x = "Embarked", y = "Survived", hue = 'Sex')
+plt.show()
 
 # A: I was interested to see what the survival rate looked like for the passengers from each of the three ports. From the chart generated below, 
 # We can see that Cherbourg had the highest survival rate among males and females compared to the other two ports.
