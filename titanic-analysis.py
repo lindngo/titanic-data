@@ -84,9 +84,11 @@ survival_pivot_table.drop('All')
 # Q: Is Age or Fare an important factor to one's chance of survival?
 
 sns.displot(titanic, x='Age', hue='Survived', kind = 'kde')
+plt.title('Survival Rate based on Age')
 plt.show()
 
 sns.displot(titanic, x='Fare', hue='Survived', kind = 'kde')
+plt.title('Survival Rate based on Fare')
 plt.show()
 
 # A: From this visualization, it is difficult to make significant conclusions based on age. For those who survived, they fell within the 20-40 year old range, where as those who did not survive, they also fell within the 20-40 range.
@@ -120,6 +122,7 @@ plt.show()
 # Q: Find the correlations between the feature and the target variable _Survived_ and use heatmap to visualize it.
 
 sns.heatmap(titanic.corr(), annot = True)
+plt.title('Correlations between Feature and Target (Survived)')
 plt.show()
 
 # A: From the heatmap generated, we can see that Survived variable is correlated most with Fare, as the correlation value is 0.26. On the other hand, we can conclude that Pclass has the weakest correlation with survival rate with a value of -0.34.
@@ -127,6 +130,7 @@ plt.show()
 # Q: Any other insights do you draw by analyzing the data?
 
 sns.barplot(data = titanic, x = "Embarked", y = "Survived", hue = 'Sex')
+plt.title('Survival Rate based on Embarked Port')
 plt.show()
 
 # A: I was interested to see what the survival rate looked like for the passengers from each of the three ports. From the chart generated below, 
