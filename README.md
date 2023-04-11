@@ -2,7 +2,7 @@
 
 
 ### Overview
-In this Python file, I utilized pandas, matpotlib, and seaborn to analyze and visualize the Titanic dataset. Specifically, I wanted to see which factors impacted the passengers' survival rate the most, as well as the least. Furthermore, I used various visualization techniques to create graphs of the data, including heatmaps, distribution plots, and bar plots.
+In this Python file, I utilized pandas, matpotlib, and seaborn to analyze and visualize the Titanic dataset. Specifically, I wanted to see which factors impacted the passengers' survival rate the most, as well as the least. Furthermore, I used various visualization techniques to create graphs of the data, including heatmaps, bar plots, and more.
 
 ## Dataset
 https://raw.githubusercontent.com/zariable/data/master/titanic_train.csv. 
