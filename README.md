@@ -21,6 +21,7 @@ I obtained this dataset here: https://raw.githubusercontent.com/zariable/data/ma
 - Embarked: The port where the passenger embarked (C=Cherbourg, Q=Queenstown, S=Southampton)
 
 ### Conclusion
+From my analysis, I drew that passenger survival rate was heavily dependant on their fare. As seen in the generated heatmap below, the correlation factor between survival and fare is 0.26, indicating that they are strongly related. On the other hand, Pclass is the weakest correlated factor (-0.34) to survival.
 
 ![image](https://user-images.githubusercontent.com/63205351/231035649-effe4dbe-857f-472c-bd43-3066e73b040f.png)
 
