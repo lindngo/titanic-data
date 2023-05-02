@@ -7,7 +7,7 @@ In this Python file, I utilized pandas, matpotlib, and seaborn to analyze and vi
 ## Dataset
 https://raw.githubusercontent.com/zariable/data/master/titanic_train.csv
 
-### Dataset Factors
+## Dataset Factors
 - PassengerID: A column added by Kaggle to identify each row and make submissions easier
 - Survived: Whether the passenger survived or not and the value we are predicting (0=No, 1=Yes)
 - Pclass: The class of the ticket the passenger purchased (1=1st, 2=2nd, 3=3rd)
@@ -20,7 +20,7 @@ https://raw.githubusercontent.com/zariable/data/master/titanic_train.csv
 - Cabin: The passenger's cabin number
 - Embarked: The port where the passenger embarked (C=Cherbourg, Q=Queenstown, S=Southampton)
 
-### Conclusions
+## Conclusions
 ![image](https://user-images.githubusercontent.com/63205351/231035649-effe4dbe-857f-472c-bd43-3066e73b040f.png)
 
 From my analysis, I drew that passenger survival rate was heavily dependant on their fare. As seen in the generated heatmap below, the correlation factor between survival and fare is 0.26, indicating that they are strongly related. On the other hand, Pclass is the weakest correlated factor (-0.34) to survival.
