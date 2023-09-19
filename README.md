@@ -35,5 +35,5 @@ We can see that 1-2 siblings/spouses had higher survival rates compared to the o
 
 ![image](https://user-images.githubusercontent.com/63205351/231038027-ca002a59-4639-4c8c-bf59-2201901508b3.png)
 
-Lastly, I was interested to see what the survival rate looked like for the passengers from each of the three ports. From the chart generated above, we can see that Cherbourg had the highest survival rate among males and females compared to the other two ports.
+Lastly, I was interested to see what the survival rate looked like for the passengers from each of the ports. From the chart generated above, we can see that Cherbourg had the highest survival rate among males and females compared to the other two ports.
 
